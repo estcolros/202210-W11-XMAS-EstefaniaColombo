@@ -1,7 +1,7 @@
 import { MenuItemsType } from '../../../types/menu.items';
 import { Layout } from '../layout/layout';
 import { AppRoutes } from '../routes/app.routes';
-import './App.css';
+import './App.scss';
 
 function App() {
     const items: MenuItemsType = [
