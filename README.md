@@ -50,8 +50,8 @@ Back to testing: make it pick up in sonar and try to get 100% coverage
 
 ## Netlify
 
-**Deploy:**
+**Deploy:** https://202210-w11-xmas-estcolros.netlify.app/
 
 ## SonarCloud
 
-**Overview:**
+**Overview:** https://sonarcloud.io/summary/overall?id=estcolros_202210-W11-XMAS-EstefaniaColombo
