@@ -1,5 +1,7 @@
+import './header.scss';
+
 export function Header({ children }: { children: JSX.Element }) {
-    const title = 'Robots challenge';
+    const title = 'Robotics';
 
     return (
         <header aria-label="title">

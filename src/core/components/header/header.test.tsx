@@ -16,7 +16,7 @@ describe('Given Header component', () => {
             // const element = screen.getAllByText(/Learning Components/i);
             // La mejor práctica sería hacerlo por rol
             const elementHeader = screen.getByRole('heading', {
-                name: 'Robots challenge',
+                name: 'Robotics',
             });
             expect(elementHeader).toBeInTheDocument();
         });

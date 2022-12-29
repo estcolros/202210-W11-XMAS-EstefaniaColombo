@@ -1,0 +1,20 @@
+$bg-color: linear-gradient(90deg, #faf36e, #fba608);
+$text-color: #0d0d0d;
+
+header {
+    background: $bg-color;
+    color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+
+    h1 {
+        text-align: left;
+        cursor: pointer;
+        background-image: url('./logo.png');
+        background-repeat: no-repeat;
+        background-size: 40px 40px;
+        padding: 0.2rem 2.8rem;
+    }
+}
