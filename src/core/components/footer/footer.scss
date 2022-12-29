@@ -1,0 +1,13 @@
+$bg-color: linear-gradient(90deg, #faf36e, #fba608);
+$text-color: #0d0d0d;
+
+footer {
+    background: $bg-color;
+    color: $text-color;
+    padding-block: 1.5rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
