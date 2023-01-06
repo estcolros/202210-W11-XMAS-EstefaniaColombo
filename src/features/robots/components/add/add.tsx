@@ -24,7 +24,7 @@ export function Add({ handleAdd }: { handleAdd: (item: RobotType) => void }) {
         handleAdd(
             new Robot(
                 formData.name as string,
-                formData.imgUrl as string,
+                formData.imgUrl,
                 formData.velocity as string,
                 formData.resistance as string,
                 formData.creator as string
