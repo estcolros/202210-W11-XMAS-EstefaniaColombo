@@ -26,7 +26,8 @@
         "eject": "react-scripts eject",
         "prepare": "husky install",
         "lint": "eslint .",
-        "sass": "sass scss:css --watch"
+        "sass": "sass scss:css --watch",
+        "server": "json-server --watch ./server/db.json"
     },
     "eslintConfig": {
         "extends": [

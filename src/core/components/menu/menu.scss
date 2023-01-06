@@ -19,6 +19,13 @@
             color: inherit;
             padding-inline-end: 1rem;
             padding-block: 1rem;
+            -webkit-transition: font-size 1s ease;
+            transition: font-size 1s ease;
+            &:hover {
+                font-size: 18px;
+                font-weight: bold;
+                color: red;
+            }
         }
     }
 }

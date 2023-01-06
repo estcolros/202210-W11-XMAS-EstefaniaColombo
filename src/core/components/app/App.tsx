@@ -1,20 +1,19 @@
-import { MenuItemsType } from '../../../types/menu.items';
+import { MenuItemsType } from '../../types/menu.items';
 import { Layout } from '../layout/layout';
-import { AppRoutes } from '../routes/app.routes';
+import { AppLazyRoutes } from '../routes/app.lazy.routes';
 import './App.scss';
 
-function App() {
-    const items: MenuItemsType = [
-        { path: '/home', label: 'Home' },
-        { path: '/robots', label: 'Robots' },
-        { path: '/favourites', label: 'Favourites' },
-    ];
-
+export const items: MenuItemsType = [
+    { path: '/home', label: 'Home' },
+    { path: '/robots', label: 'Robots' },
+    { path: '/favourites', label: 'Favourites' },
+];
+export function App() {
     return (
         <>
-            <Layout items={items}>
-                <AppRoutes items={items}></AppRoutes>
-            </Layout>{' '}
+            <Layout>
+                <AppLazyRoutes items={items}></AppLazyRoutes>
+            </Layout>
         </>
     );
 }

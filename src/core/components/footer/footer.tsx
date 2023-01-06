@@ -6,7 +6,6 @@ export function Footer() {
                 Estefania Colombo Rosario | XMAS Challenge 🤖 | ISDI Coders{' '}
                 {new Date().toLocaleDateString()}
             </address>
-            {/* <p>{new Date().toLocaleDateString()}</p> */}
         </footer>
     );
 }
