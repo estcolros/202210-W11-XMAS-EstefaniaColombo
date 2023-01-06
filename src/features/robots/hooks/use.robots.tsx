@@ -4,9 +4,7 @@ import { RobotType } from '../models/robot.model';
 import { RobotsRepo } from '../services/repository/robots.repo';
 
 export type UseRobots = {
-    getRobots: () => Array<RobotType>;
     getStatus: () => Status;
-
     robots: Array<RobotType>;
     handleLoad: () => Promise<void>;
     handleAdd: (robotData: RobotType) => Promise<void>;
@@ -26,7 +24,6 @@ export function useRobots(): UseRobots {
     const [status, setStatus] = useState(initialStatus);
 
     const getStatus = () => status;
-    const getRobots = () => robots;
 
     useEffect(() => {
         sessionStorage.setItem('robots', JSON.stringify(robots.length));
@@ -94,7 +91,6 @@ export function useRobots(): UseRobots {
 
     return {
         getStatus,
-        getRobots,
         robots,
         handleLoad,
         handleAdd,

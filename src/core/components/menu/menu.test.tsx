@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router';
-import { items } from '../app/App';
+import { items } from '../routes/mocks';
 import { Menu } from './menu';
 describe('Given Menu component', () => {
     describe('When it has been render', () => {
