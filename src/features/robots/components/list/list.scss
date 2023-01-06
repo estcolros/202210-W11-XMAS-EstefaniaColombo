@@ -28,5 +28,6 @@ p {
     transition: background-color 1s linear;
     &:hover {
         background-color: #00eeff;
+        transform: scale(1.03);
     }
 }
