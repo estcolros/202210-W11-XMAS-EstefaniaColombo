@@ -2,7 +2,7 @@
 import { render, screen, waitFor, act } from '@testing-library/react';
 import { useRobots } from '../../hooks/use.robots';
 import FavouritesPage from './favourites.page';
-// import {useRobots} from '../../hooks/use.robots';
+
 jest.mock('../../hooks/use.robots');
 
 const mockRobots = [
