@@ -55,9 +55,7 @@ export function Add({ handleAdd }: { handleAdd: (item: RobotType) => void }) {
                         type="text"
                         name="velocity"
                         id="velocity"
-                        min="0"
-                        max="10"
-                        placeholder="Write a velocity 1-10"
+                        placeholder="Write a velocity 0-10"
                         value={formData.velocity}
                         onInput={handleInput}
                         required
@@ -69,9 +67,7 @@ export function Add({ handleAdd }: { handleAdd: (item: RobotType) => void }) {
                         type="text"
                         name="resistance"
                         id="resistance"
-                        min="0"
-                        max="10"
-                        placeholder="Write a resistance 1-10"
+                        placeholder="Write a resistance 0-10"
                         value={formData.resistance}
                         onInput={handleInput}
                         required
