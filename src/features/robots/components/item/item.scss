@@ -1,0 +1,64 @@
+.robot-items {
+    position: relative;
+    border-radius: 1rem;
+    text-align: justify;
+    max-width: 280px;
+    list-style: none;
+
+    p {
+        color: #f85904;
+        font-size: 1.2rem;
+        justify-content: center;
+    }
+
+    .robot-items__info {
+        margin: 1rem;
+        p {
+            font-size: 1rem;
+            text-align: justify;
+            margin: 0.3rem;
+
+            span {
+                color: #535353;
+                font-style: italic;
+                font-size: 1rem;
+            }
+        }
+        img {
+            margin: auto;
+            margin-block: 1rem;
+            width: 80%;
+            height: auto;
+            display: flex;
+        }
+    }
+    .buttons-item {
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.5s;
+        background-color: transparent;
+        border: none;
+        font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 48;
+        color: #ff0331;
+        cursor: pointer;
+    }
+
+    .button-delete {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        background-color: transparent;
+        opacity: 0;
+        transition: all 0.5s;
+        border: none;
+        font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 48;
+        color: #ff0331;
+    }
+
+    &:hover {
+        * {
+            opacity: 1;
+        }
+    }
+}

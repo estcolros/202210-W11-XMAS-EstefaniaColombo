@@ -4,10 +4,9 @@ $text-color: #0d0d0d;
 footer {
     background: $bg-color;
     color: $text-color;
-    padding-block: 1.5rem;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+    padding-block: 1rem;
+    text-align: center;
+
     bottom: 0;
     width: 100%;
 }

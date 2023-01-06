@@ -1,14 +1,9 @@
-import { Header } from '../header/header';
+import { items } from '../app/App';
 import { Footer } from '../footer/footer';
-import { MenuItemsType } from '../../../types/menu.items';
+import { Header } from '../header/header';
 import { Menu } from '../menu/menu';
-export function Layout({
-    items,
-    children,
-}: {
-    items: MenuItemsType;
-    children: JSX.Element;
-}) {
+
+export function Layout({ children }: { children: JSX.Element }) {
     return (
         <>
             <Header>

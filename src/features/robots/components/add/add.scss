@@ -1,0 +1,42 @@
+.add-robot__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+
+    input {
+        font-family: inherit;
+        margin-top: 1rem;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+        border-color: rgb(245, 169, 126);
+        border-style: double;
+        text-align: center;
+        width: 150px;
+    }
+    label {
+        margin: 3rem;
+        margin-right: 1rem;
+    }
+
+    button {
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+        font-size: 1rem;
+        margin-right: 0.3rem;
+        margin: 3rem;
+        margin-top: 1rem;
+        padding: 0.8rem;
+        background-color: rgb(255, 123, 0);
+        border-style: outset;
+        color: beige;
+        border: none;
+        border-radius: 0.8rem;
+        width: 85px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(255, 0, 38);
+        }
+    }
+}

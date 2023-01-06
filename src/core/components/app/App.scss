@@ -11,14 +11,12 @@ body {
     font-family: $font, sans-serif;
     min-height: 100vh;
     padding: 0;
+    text-align: center;
 }
 #root {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-h2 {
-    text-align: left;
-    text-indent: 2em;
+    display: grid;
+    grid-template-rows: auto 1.5fr auto;
 }

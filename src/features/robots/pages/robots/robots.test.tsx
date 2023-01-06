@@ -1,18 +1,16 @@
 import { render, screen } from '@testing-library/react';
-
 import { MemoryRouter as Router } from 'react-router';
-import { App } from './App';
-
-describe('Given App component', () => {
+import RobotsPage from './robots.page';
+describe('Given RobotsPage component', () => {
     describe('When it has been render', () => {
-        test('Then its child components should be render also with its title', () => {
+        test('Then the title should be in the screen', () => {
             render(
                 <Router>
-                    <App />
+                    <RobotsPage></RobotsPage>
                 </Router>
             );
             const elementHeader = screen.getByRole('heading', {
-                name: 'Robotics',
+                name: 'Robots',
             });
             expect(elementHeader).toBeInTheDocument();
         });

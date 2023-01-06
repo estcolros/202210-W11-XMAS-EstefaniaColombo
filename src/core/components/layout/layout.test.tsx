@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
-
 import { MemoryRouter as Router } from 'react-router';
-import { App } from './App';
-
-describe('Given App component', () => {
+import { Layout } from './layout';
+describe('Given Header component', () => {
     describe('When it has been render', () => {
-        test('Then its child components should be render also with its title', () => {
+        test('Then the title should be in the screen', () => {
             render(
                 <Router>
-                    <App />
+                    <Layout>
+                        <></>
+                    </Layout>
                 </Router>
             );
             const elementHeader = screen.getByRole('heading', {
