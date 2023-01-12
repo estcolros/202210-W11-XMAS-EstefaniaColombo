@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { DetailsPage } from '../../../features/robots/pages/details/details.page';
 import { MenuItemsType } from '../../types/menu.items';
 
 const Home = lazy(
@@ -11,6 +12,7 @@ const Robots = lazy(
 const Favourites = lazy(
     () => import('../../../features/robots/pages/favourites/favourites.page')
 );
+
 export function AppLazyRoutes({ items }: { items: MenuItemsType }) {
     return (
         <Suspense>
@@ -21,6 +23,10 @@ export function AppLazyRoutes({ items }: { items: MenuItemsType }) {
                 <Route
                     path={items[2].path}
                     element={<Favourites></Favourites>}
+                ></Route>
+                <Route
+                    path=":page/:robotId"
+                    element={<DetailsPage></DetailsPage>}
                 ></Route>
                 <Route
                     path={'*'}

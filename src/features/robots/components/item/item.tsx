@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { RobotType } from '../../models/robot.model';
 import './item.scss';
 
@@ -15,9 +16,7 @@ export function Item({
     const handleClick = () => {
         handleDelete(item.id);
     };
-    const handleUpdateClick = () => {
-        handleUpdate(item);
-    };
+
     const handleFavouriteClick = () => {
         handleFavourite(item);
     };
@@ -46,9 +45,15 @@ export function Item({
             </div>
 
             <div className="buttons-item">
-                <button className="buttons-item" onClick={handleUpdateClick}>
+                <Link to={`/details/${item.id}`}>
+                    <button className="buttons-item">
+                        <span className="material-symbols-outlined">edit</span>
+                    </button>
+                </Link>
+
+                {/* <button className="buttons-item" onClick={handleUpdateClick}>
                     <span className="material-symbols-outlined">edit</span>
-                </button>
+                </button> */}
                 <button className="buttons-item" onClick={handleFavouriteClick}>
                     {item.isFavourite ? (
                         <span className="material-symbols-outlined">

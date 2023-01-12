@@ -1,5 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 import { act, render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import { useRobots } from '../../hooks/use.robots';
 import { Robot } from '../../models/robot.model';
 import { List } from './list';
@@ -31,7 +32,11 @@ describe('Given "List" component', () => {
     describe('When it is initially instantiated without data', () => {
         beforeEach(async () => {
             await act(async () => {
-                render(<List></List>);
+                render(
+                    <BrowserRouter>
+                        <List></List>
+                    </BrowserRouter>
+                );
             });
         });
         test(`Then component should be render the loading`, () => {

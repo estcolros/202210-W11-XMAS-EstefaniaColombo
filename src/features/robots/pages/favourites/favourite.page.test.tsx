@@ -1,5 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 import { render, screen, waitFor, act } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import { useRobots } from '../../hooks/use.robots';
 import FavouritesPage from './favourites.page';
 
@@ -23,7 +24,11 @@ describe('Given "List" component', () => {
     describe('When it is initially instantiated without data', () => {
         beforeEach(async () => {
             await act(async () => {
-                render(<FavouritesPage></FavouritesPage>);
+                render(
+                    <BrowserRouter>
+                        <FavouritesPage></FavouritesPage>
+                    </BrowserRouter>
+                );
             });
         });
         test(`Then component should be render the loading`, () => {
@@ -38,7 +43,11 @@ describe('Given "List" component', () => {
     describe('When it load the data', () => {
         beforeEach(async () => {
             await act(async () => {
-                render(<FavouritesPage></FavouritesPage>);
+                render(
+                    <BrowserRouter>
+                        <FavouritesPage></FavouritesPage>
+                    </BrowserRouter>
+                );
             });
         });
         test(`Then it should be render the data`, async () => {
