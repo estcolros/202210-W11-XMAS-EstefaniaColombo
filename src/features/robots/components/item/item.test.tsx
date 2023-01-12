@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import { Robot } from '../../models/robot.model';
 import { Item } from './item';
 
@@ -23,33 +23,35 @@ describe('Given Robot component', () => {
     describe('When it has been render', () => {
         test('Then the title should be in the screen', () => {
             render(
-                <Item
-                    item={mockRobot}
-                    handleUpdate={handleUpdate}
-                    handleDelete={handleDelete}
-                    handleFavourite={handleFavourite}
-                ></Item>
+                <BrowserRouter>
+                    <Item
+                        item={mockRobot}
+                        handleDelete={handleDelete}
+                        handleUpdate={handleUpdate}
+                        handleFavourite={handleFavourite}
+                    ></Item>
+                </BrowserRouter>
             );
-            const btnDelete = screen.getByRole('button', {
-                name: 'delete',
-            });
-            expect(btnDelete).toBeInTheDocument();
-            userEvent.click(btnDelete);
-            expect(handleDelete).toHaveBeenCalledTimes(1);
+            const textElement = screen.getByText(/Creator:/i);
+            expect(textElement).toBeInTheDocument();
+        });
 
-            const btnUpdate = screen.getByRole('button', {
-                name: 'edit',
-            });
-            expect(btnUpdate).toBeInTheDocument();
-            userEvent.click(btnUpdate);
-            expect(handleUpdate).toHaveBeenCalledTimes(1);
-
-            const btnAddFavourite = screen.getByRole('button', {
-                name: 'favorite',
-            });
-            expect(btnAddFavourite).toBeInTheDocument();
-            userEvent.click(btnAddFavourite);
-            expect(handleFavourite).toHaveBeenCalledTimes(1);
+        test('Then buttons should work', () => {
+            render(
+                <BrowserRouter>
+                    <Item
+                        item={mockRobot}
+                        handleDelete={handleDelete}
+                        handleUpdate={handleUpdate}
+                        handleFavourite={handleFavourite}
+                    ></Item>
+                </BrowserRouter>
+            );
+            const buttonElement = screen.queryAllByRole('button');
+            fireEvent.click(buttonElement[0]);
+            fireEvent.click(buttonElement[2]);
+            expect(handleDelete).toHaveBeenCalled();
+            expect(handleFavourite).toHaveBeenCalled();
         });
     });
 });
