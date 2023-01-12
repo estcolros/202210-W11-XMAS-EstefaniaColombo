@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Details } from '../../components/details/details';
